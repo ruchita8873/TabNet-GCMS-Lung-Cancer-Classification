@@ -1,5 +1,5 @@
 # Overview
-Early-stage lung cancer is hard to diagnose because it is largely asymptomatic, and conventional diagnostic pipelines (imaging, biopsy) are invasive, costly, or come late in disease progression. Breathomics profiling volatile organic compounds (VOCs) in exhaled breath via gas chromatography–mass spectrometry (GC‑MS) offers a non‑invasive alternative, but most prior work relies on black‑box machine learning with little biological validation.
+Early-stage lung cancer is hard to diagnose because it is largely asymptomatic, and conventional diagnostic pipelines (imaging, biopsy) are invasive, costly, or come late in disease progression. Breathomics profiling volatile organic compounds (VOCs) in exhaled breath via gas chromatography-mass spectrometry (GC‑MS) offers a non‑invasive alternative, but most prior work relies on black‑box machine learning with little biological validation.
 
 This project addresses that gap with a pipeline that:
 
@@ -12,7 +12,7 @@ Explains predictions with SHAP, validates biomarker robustness with permutation 
 Source: Publicly available GC‑MS breathomics dataset from STAT540-UBC-2026/project-spruce.
 Size: 3,264 samples × 11,502 features + metadata (age, sex, smoking status, sample date, sample type).
 Sample types: Exhaled breath (EX), room air (RM), CASPER-filtered air (CP), standard/reference (RI).
-Patient categories: Indeterminate Pulmonary Nodule (IPN), Control, Stable Nodule, Cancer, Cancer Possible — remapped into 3 risk groups (Low / Intermediate / High).
+Patient categories: Indeterminate Pulmonary Nodule (IPN), Control, Stable Nodule, Cancer, Cancer Possible - remapped into 3 risk groups (Low / Intermediate / High).
 
 # Methodology Pipeline
 - Raw GC-MS VOC data + metadata
