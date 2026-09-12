@@ -15,36 +15,18 @@ Sample types: Exhaled breath (EX), room air (RM), CASPER-filtered air (CP), stan
 Patient categories: Indeterminate Pulmonary Nodule (IPN), Control, Stable Nodule, Cancer, Cancer Possible — remapped into 3 risk groups (Low / Intermediate / High).
 
 # Methodology Pipeline
-Raw GC-MS VOC data + metadata
-        │
-        ▼
-Risk-group label mapping (Low / Intermediate / High)
-        │
-        ▼
-Background correction (subtract RM from EX; drop CP + RI)
-        │
-        ▼
-Missing-value imputation (zero) + log-modulus transform
-        │
-        ▼
-Patient-wise 80:20 train/test split
-        │
-        ▼
-Near-zero-variance filtering + robust scaling (train only)
-        │
-        ▼
-Feature selection: one-way ANOVA + Benjamini-Hochberg FDR (p < 0.05)
-        │
-        ▼
-TabNet training with SMOTE, 5×3 nested group CV,
-Optuna (TPE + MedianPruner) hyperparameter search
-        │
-        ▼
-Held-out test evaluation (AUC, precision, recall, F1, specificity)
-        │
-        ▼
-Explainability: SHAP (global + local) → permutation importance
-        → cumulative feature ablation → biological/chemical annotation
+- Raw GC-MS VOC data + metadata
+- Risk-group label mapping (Low / Intermediate / High)
+- Background correction (subtract RM from EX; drop CP + RI)
+- Missing-value imputation (zero) + log-modulus transform
+- Patient-wise 80:20 train/test split
+- Near-zero-variance filtering + robust scaling (train only)
+- Feature selection: one-way ANOVA + Benjamini-Hochberg FDR (p < 0.05)
+- TabNet training with SMOTE, 5×3 nested group CV,
+- Optuna (TPE + MedianPruner) hyperparameter search
+- Held-out test evaluation (AUC, precision, recall, F1, specificity)
+- Explainability: SHAP (global + local) → permutation importance
+- cumulative feature ablation → biological/chemical annotation
 
 # Model: TabNet
 TabNet is a deep learning architecture for tabular data that uses sequential, learnable sparse attention (via Sparsemax) to select relevant features at each decision step, combining representation learning with built-in interpretability
