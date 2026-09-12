@@ -1,5 +1,5 @@
 # Overview
-Early-stage lung cancer is hard to diagnose because it is largely asymptomatic, and conventional diagnostic pipelines (imaging, biopsy) are invasive, costly, or come late in disease progression. Breathomics — profiling volatile organic compounds (VOCs) in exhaled breath via gas chromatography–mass spectrometry (GC‑MS) — offers a non‑invasive alternative, but most prior work relies on black‑box machine learning with little biological validation.
+Early-stage lung cancer is hard to diagnose because it is largely asymptomatic, and conventional diagnostic pipelines (imaging, biopsy) are invasive, costly, or come late in disease progression. Breathomics profiling volatile organic compounds (VOCs) in exhaled breath via gas chromatography–mass spectrometry (GC‑MS) offers a non‑invasive alternative, but most prior work relies on black‑box machine learning with little biological validation.
 
 This project addresses that gap with a pipeline that:
 
@@ -43,6 +43,7 @@ Biological annotation: links top VOC ions to known chemical classes and cancer-a
   requirements.txt
   data
   notebook
+  
 # Disclaimer 
 This repository is intended for academic and research purpose only. The models and results presented here have not been established as a clinically validated diagnostic system and should not be used for medical diagnosis or clinical decision making.
   
